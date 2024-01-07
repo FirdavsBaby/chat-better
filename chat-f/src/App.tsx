@@ -77,20 +77,20 @@ function App() {
   return (
     <main className="h-screen overflow-hidden w-full">
       <section
-        className="overflow-y-scroll rounded-3xl h-screen relative rounded-ss-none rounded-se-none lg:left-[30%] lg:w-[40%] w-[70%] left-[15%] shadow-2xl shadow-cyan-600 p-5 pb-[60px] flex flex-col gap-5"
+        className="overflow-y-scroll rounded-3xl h-screen relative rounded-ss-none rounded-se-none lg:left-[30%] lg:w-[40%] w-[95%] left-[3%] shadow-2xl shadow-cyan-600 p-5 pb-[60px] flex flex-col gap-5"
         id="messages"
       >
-        <nav className="w-full flex justify-between items-start gap-2 z-10 text-white p-2 py-3 sticky top-0 right-0">
-          <span className="font-semibold text-red-600 p-1 bg-white rounded-md lg:w-[90%] w-[70%]">
+        <nav className="w-full flex lg:flex-row flex-col justify-between items-start gap-2 z-10 text-white p-2 py-3 sticky top-0 right-0">
+          <span className="font-semibold text-red-600 p-1 bg-white rounded-md lg:w-[90%] w-[100%] lg:text-xl text-xs">
             Просим не перезагружать страницу или все ваши данные изменятся!!!
           </span>
-          <div className="flex flex-col gap-2 items-center lg:w-[12%] w-[15%]">
-            <div className="flex gap-2 items-center">
+          <div className="flex  flex-col gap-2 items-center lg:w-[12%] w-[100%]">
+            <div className="flex gap-2 items-center justify-center">
               <h3>{me?.name}</h3>
-              <img src={UserIMG} className="w-[50%]" alt="" />
+              <img src={UserIMG} className="lg:w-[50%] w-[10%]" alt="" />
             </div>
             <button
-              className="w-full p-2 bg-red-600 rounded-md hover:bg-red-800"
+              className="w-full lg:p-2 p-1 bg-red-600 rounded-md hover:bg-red-800"
               type="button"
               onClick={() => handleChangeUser()}
             >
@@ -118,7 +118,7 @@ function App() {
       </section>
       <form
         onSubmit={handleSumbit}
-        className="fixed lg:left-[30%] flex justify-between lg:w-[40%] w-[70%] left-[15%] bg-white bottom-0 rounded"
+        className="fixed lg:left-[30%] flex justify-between lg:w-[40%] w-[95%] left-[3%] bg-white bottom-0 rounded"
       >
         <input
           type="text"
