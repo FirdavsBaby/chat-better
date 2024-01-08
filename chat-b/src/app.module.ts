@@ -6,7 +6,9 @@ import { ChatModule } from './chat/chat.gateway.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/chat'),
+    MongooseModule.forRoot(
+      'mongodb+srv://Firdavs:20080805Firdavs@chat.diln91p.mongodb.net/',
+    ),
     ChatModule,
   ],
   controllers: [AppController],
